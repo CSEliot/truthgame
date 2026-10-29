@@ -31,7 +31,7 @@
     "RecommendedMinPlayers": 4,
     "RecommendedMaxPlayers": 6,
     "Coop": true,
-    "Versus": false,
+    "Versus": true,
     "WorkshopTags": [
       "Casual",
       "Exploration",

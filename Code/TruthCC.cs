@@ -50,7 +50,8 @@ public sealed class TruthCC : Component
 
 	protected override void OnStart()
 	{
-		// Nothing
+		var dressing = ClothingContainer.CreateFromConnection( Network.Owner);
+		GetComponent<Dresser>().ApplyAsync( dressing );
 	}
 
 	protected override void OnUpdate()

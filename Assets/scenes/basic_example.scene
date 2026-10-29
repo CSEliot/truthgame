@@ -103,7 +103,7 @@
           "__guid": "83b3c5dc-9f6d-431d-8855-108aaa035a6a",
           "__enabled": true,
           "Flags": 0,
-          "Denominator": 999,
+          "Denominator": 300,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -481,6 +481,19 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Rate": 1
+        },
+        {
+          "__type": "Sandbox.AudioListener",
+          "__guid": "abb851d6-3e5d-4394-a337-e0fa5b862304",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "UseCameraDirection": true
         }
       ],
       "Children": []
@@ -597,7 +610,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "2daa05ba-3cb5-4889-a193-66b44954c02a",
+            "Id": "06522770-08e0-4d51-8f8e-ccb58c2c8a9e",
             "Path": "models/antique_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -624,7 +637,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "2daa05ba-3cb5-4889-a193-66b44954c02a",
+            "Id": "06522770-08e0-4d51-8f8e-ccb58c2c8a9e",
             "Path": "models/antique_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -652,7 +665,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "2daa05ba-3cb5-4889-a193-66b44954c02a",
+            "Id": "06522770-08e0-4d51-8f8e-ccb58c2c8a9e",
             "Path": "models/antique_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -743,7 +756,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "1b1b4280-6182-4f41-aac7-15b745eca5bc",
+            "Id": "40b25063-5746-4b79-a254-abb322634f2f",
             "Path": "models/chairs/leather_chair/leather_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -770,7 +783,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "1b1b4280-6182-4f41-aac7-15b745eca5bc",
+            "Id": "40b25063-5746-4b79-a254-abb322634f2f",
             "Path": "models/chairs/leather_chair/leather_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -798,7 +811,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "1b1b4280-6182-4f41-aac7-15b745eca5bc",
+            "Id": "40b25063-5746-4b79-a254-abb322634f2f",
             "Path": "models/chairs/leather_chair/leather_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -889,7 +902,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "28183bd5-eadb-4cd8-b351-d88730c5eb7f",
+            "Id": "bb6c30e5-f51b-4bbf-b188-6096bef3fa09",
             "Path": "models/chairs/chair20.vmdl"
           },
           "OnComponentDestroy": null,
@@ -916,7 +929,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "28183bd5-eadb-4cd8-b351-d88730c5eb7f",
+            "Id": "bb6c30e5-f51b-4bbf-b188-6096bef3fa09",
             "Path": "models/chairs/chair20.vmdl"
           },
           "OnComponentDestroy": null,
@@ -944,7 +957,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "28183bd5-eadb-4cd8-b351-d88730c5eb7f",
+            "Id": "bb6c30e5-f51b-4bbf-b188-6096bef3fa09",
             "Path": "models/chairs/chair20.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1035,7 +1048,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "547e8e3b-deda-4775-a22f-2b6b8ed5897c",
+            "Id": "da8bfd59-c92e-4f0d-86f6-bd37bdf8d02d",
             "Path": "models/weird_chair/weird_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1062,7 +1075,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "547e8e3b-deda-4775-a22f-2b6b8ed5897c",
+            "Id": "da8bfd59-c92e-4f0d-86f6-bd37bdf8d02d",
             "Path": "models/weird_chair/weird_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1090,7 +1103,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "547e8e3b-deda-4775-a22f-2b6b8ed5897c",
+            "Id": "da8bfd59-c92e-4f0d-86f6-bd37bdf8d02d",
             "Path": "models/weird_chair/weird_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1181,7 +1194,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "1b1b4280-6182-4f41-aac7-15b745eca5bc",
+            "Id": "40b25063-5746-4b79-a254-abb322634f2f",
             "Path": "models/chairs/leather_chair/leather_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1208,7 +1221,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "1b1b4280-6182-4f41-aac7-15b745eca5bc",
+            "Id": "40b25063-5746-4b79-a254-abb322634f2f",
             "Path": "models/chairs/leather_chair/leather_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1236,7 +1249,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "1b1b4280-6182-4f41-aac7-15b745eca5bc",
+            "Id": "40b25063-5746-4b79-a254-abb322634f2f",
             "Path": "models/chairs/leather_chair/leather_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1327,7 +1340,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "4131e214-9c31-41fe-98cd-bc320f964189",
+            "Id": "17c292e5-88e5-4f8f-b7bf-3933d4ee3c42",
             "Path": "models/gaming_stuff/gaming_chair/gaming_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1354,7 +1367,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "4131e214-9c31-41fe-98cd-bc320f964189",
+            "Id": "17c292e5-88e5-4f8f-b7bf-3933d4ee3c42",
             "Path": "models/gaming_stuff/gaming_chair/gaming_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1382,7 +1395,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "4131e214-9c31-41fe-98cd-bc320f964189",
+            "Id": "17c292e5-88e5-4f8f-b7bf-3933d4ee3c42",
             "Path": "models/gaming_stuff/gaming_chair/gaming_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1432,7 +1445,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Object",
-          "Position": "-98.1670761,16.6555977,22.820776",
+          "Position": "-1.27954483,16.6555977,22.820776",
           "Rotation": "0,0,0.707106829,0.707106769",
           "Scale": "1,1,1",
           "Tags": "",
@@ -1473,7 +1486,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "4066225a-07ed-445c-9b69-7e803d08ca96",
+            "Id": "5afe90af-d887-46a7-9458-da053eee9c3a",
             "Path": "models/aschair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1500,7 +1513,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "4066225a-07ed-445c-9b69-7e803d08ca96",
+            "Id": "5afe90af-d887-46a7-9458-da053eee9c3a",
             "Path": "models/aschair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1528,7 +1541,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "4066225a-07ed-445c-9b69-7e803d08ca96",
+            "Id": "5afe90af-d887-46a7-9458-da053eee9c3a",
             "Path": "models/aschair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1619,7 +1632,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "e9ca319f-dac2-4705-a833-e35f92c79510",
+            "Id": "61c8fd6e-6906-4a66-bf43-599b0479b793",
             "Path": "models/props/plastic_chair/plastic_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1646,7 +1659,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "e9ca319f-dac2-4705-a833-e35f92c79510",
+            "Id": "61c8fd6e-6906-4a66-bf43-599b0479b793",
             "Path": "models/props/plastic_chair/plastic_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1674,7 +1687,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "e9ca319f-dac2-4705-a833-e35f92c79510",
+            "Id": "61c8fd6e-6906-4a66-bf43-599b0479b793",
             "Path": "models/props/plastic_chair/plastic_chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1765,7 +1778,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "a2c586de-9ad0-4be8-843f-733f609445ee",
+            "Id": "e5210e91-864e-48b7-a34c-1f271fee248a",
             "Path": "models/props/trim_sheets/chairs/wooden_chair_a.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1792,7 +1805,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "a2c586de-9ad0-4be8-843f-733f609445ee",
+            "Id": "e5210e91-864e-48b7-a34c-1f271fee248a",
             "Path": "models/props/trim_sheets/chairs/wooden_chair_a.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1820,7 +1833,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "a2c586de-9ad0-4be8-843f-733f609445ee",
+            "Id": "e5210e91-864e-48b7-a34c-1f271fee248a",
             "Path": "models/props/trim_sheets/chairs/wooden_chair_a.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1911,7 +1924,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "a2c586de-9ad0-4be8-843f-733f609445ee",
+            "Id": "e5210e91-864e-48b7-a34c-1f271fee248a",
             "Path": "models/props/trim_sheets/chairs/wooden_chair_a.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1938,7 +1951,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "a2c586de-9ad0-4be8-843f-733f609445ee",
+            "Id": "e5210e91-864e-48b7-a34c-1f271fee248a",
             "Path": "models/props/trim_sheets/chairs/wooden_chair_a.vmdl"
           },
           "OnComponentDestroy": null,
@@ -1966,7 +1979,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "a2c586de-9ad0-4be8-843f-733f609445ee",
+            "Id": "e5210e91-864e-48b7-a34c-1f271fee248a",
             "Path": "models/props/trim_sheets/chairs/wooden_chair_a.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2057,7 +2070,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "72e76d93-2a5f-4d80-945d-8fab1200d4bc",
+            "Id": "56b9805a-24c9-40a3-8324-efcae9fa0674",
             "Path": "outdoorchair/models/props_industrial/outdoorchair/outdoorchair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2084,7 +2097,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "72e76d93-2a5f-4d80-945d-8fab1200d4bc",
+            "Id": "56b9805a-24c9-40a3-8324-efcae9fa0674",
             "Path": "outdoorchair/models/props_industrial/outdoorchair/outdoorchair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2112,7 +2125,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "72e76d93-2a5f-4d80-945d-8fab1200d4bc",
+            "Id": "56b9805a-24c9-40a3-8324-efcae9fa0674",
             "Path": "outdoorchair/models/props_industrial/outdoorchair/outdoorchair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2203,7 +2216,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "97577871-ae3a-40f7-9765-3b24a85fe288",
+            "Id": "81143dfe-322a-4a2b-b4c4-bac5f0abb022",
             "Path": "models/school_chair_01/school_chair_01.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2230,7 +2243,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "97577871-ae3a-40f7-9765-3b24a85fe288",
+            "Id": "81143dfe-322a-4a2b-b4c4-bac5f0abb022",
             "Path": "models/school_chair_01/school_chair_01.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2258,7 +2271,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "97577871-ae3a-40f7-9765-3b24a85fe288",
+            "Id": "81143dfe-322a-4a2b-b4c4-bac5f0abb022",
             "Path": "models/school_chair_01/school_chair_01.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2349,7 +2362,7 @@
           "IsStatic": true,
           "MaterialGroup": null,
           "Model": {
-            "Id": "bc9b418c-decf-48fd-85dc-a17d72a8c256",
+            "Id": "36d5d17c-b4a2-4129-becc-c8da07850aac",
             "Path": "materials/chair/chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2376,7 +2389,7 @@
           "MaterialOverride": null,
           "Materials": null,
           "Model": {
-            "Id": "bc9b418c-decf-48fd-85dc-a17d72a8c256",
+            "Id": "36d5d17c-b4a2-4129-becc-c8da07850aac",
             "Path": "materials/chair/chair.vmdl"
           },
           "OnComponentDestroy": null,
@@ -2404,7 +2417,7 @@
           "Friction": null,
           "IsTrigger": false,
           "Model": {
-            "Id": "bc9b418c-decf-48fd-85dc-a17d72a8c256",
+            "Id": "36d5d17c-b4a2-4129-becc-c8da07850aac",
             "Path": "materials/chair/chair.vmdl"
           },
           "OnComponentDestroy": null,
