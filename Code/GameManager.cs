@@ -50,13 +50,15 @@ public sealed class GameManager : Component
 
 	protected override void OnUpdate()
 	{
+		Log.Info("Game State: " + _gameState);
 		if ( _gameState == GameState.Waiting )
 		{
-			var allPlayers = Scene.FindAllWithTag( "Player" ).ToList();
+			var allPlayers = Scene.FindAllWithTag( "player" ).ToList();
 			if ( allPlayers.Count > 1)
 			{
 				var everyoneReady = true;
 				List<TruthCC> players = new ();
+				Log.Info(players.Count + " player(s) found");
 				foreach ( var player in allPlayers )
 				{
 					var playerComponent = player.GetComponent<TruthCC>();

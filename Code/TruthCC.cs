@@ -28,6 +28,8 @@ public sealed class TruthCC : Component
 {
 	[Property, Sync] public bool IsReady { get; set; }
 
+	private CameraComponent _camera;
+
 	public enum EPlayerState
 	{
 		Waiting,
@@ -37,10 +39,14 @@ public sealed class TruthCC : Component
 
 	[Property, Sync] public EPlayerState PlayerState { get; set; } = EPlayerState.Waiting;
 	
+	[Property, Sync] public string VotingText { get; set; }
+	
+	[Property, Sync] public string TruthingText { get; set; }
+	
+	[Property, Sync] public string WaitingText { get; set; }
 
 	protected override void OnStart()
 	{
-
 	}
 
 	protected override void OnUpdate()
@@ -48,10 +54,37 @@ public sealed class TruthCC : Component
 		if ( IsProxy )
 			return;
 		
+		Log.Info("Player State: " + PlayerState);
+		
+		if(_camera == null)
+			_camera = Scene.Camera;
+		
 		if (Input.Keyboard.Pressed( "R" ))
 		{
 			IsReady = true;
+			Log.Info("Pressed R! - " + Network.OwnerId);
 		}
+		
+		DrawOnScreen();
+	}
+
+	private void DrawOnScreen()
+	{
+		if( _camera == null )
+			Log.Error("Scene Camera never found!");
+
+		float scale = _camera!.ScreenRect.Size.y / 1080f;
+
+		using var painter = _camera.BeginHud();
+
+		painter.TextStyle = new TextStyle()
+		{
+			FontName = "Poppins", FontSize = 32 * scale, Color = Color.White, Alignment = TextFlag.Center | TextFlag.DontClip,
+		};
+		
+		string speakingText = PlayerState == EPlayerState.Truthing ? TruthingText : VotingText;
+		speakingText = PlayerState == EPlayerState.Waiting ? WaitingText : speakingText;
+		painter.Text("SPEAK:: " + speakingText, new Rect(50 * scale, 50 * scale, 400 * scale, 400 * scale)  );
 	}
 }
 
