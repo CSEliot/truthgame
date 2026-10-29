@@ -22,6 +22,8 @@
 // arising from, out of, or in connection with the software or the use or
 // other dealings in the software.
 
+using System;
+
 namespace Sandbox;
 
 public sealed class GameManager : Component
@@ -39,6 +41,7 @@ public sealed class GameManager : Component
 	
 	private List<TruthCC> _Players =  new();
 	private int currentTruthingPlayer = -1;
+	// private Text
 	
 	protected override void OnStart()
 	{
@@ -78,16 +81,23 @@ public sealed class GameManager : Component
 			if( Networking.IsHost )
 			{
 				currentTruthingPlayer++;
-				SetTruthingPlayer( currentTruthingPlayer );
-				_gameState = GameState.InRound;
+				var truthingPlayerID = _Players[currentTruthingPlayer].Network.OwnerId;
+				SetModeInRoundHelper( truthingPlayerID );
 			}
 		}
 	}
 
 	[Rpc.Broadcast]
-	public void SetTruthingPlayer( int playerId )
+	private void SetModeInRoundHelper( Guid truthingPlayerID )
 	{
-		
+		_gameState = GameState.InRound;
+		foreach ( var player in _Players )
+		{
+			if ( player.Network.OwnerId == truthingPlayerID )
+				player.PlayerState = TruthCC.EPlayerState.Truthing;
+			else
+				player.PlayerState = TruthCC.EPlayerState.Voting;
+		}
 	}
 }
 
