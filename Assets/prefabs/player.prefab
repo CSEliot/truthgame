@@ -97,6 +97,18 @@
         "Speed": 1
       },
       {
+        "__type": "Sandbox.Movement.SitMoveMode",
+        "__guid": "252dc0ba-d8c3-4273-afd8-d9ee139cef69",
+        "__enabled": true,
+        "Flags": 0,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
+      },
+      {
         "__type": "Sandbox.Dresser",
         "__guid": "4b4d7c61-0721-4ee7-8f9d-07ebad950413",
         "__enabled": true,
@@ -211,6 +223,7 @@
         "__guid": "35ef93a2-1232-4cdb-9d54-a733e313af1c",
         "__enabled": true,
         "Flags": 0,
+        "IsAcceptingTruth": false,
         "IsReady": false,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -219,9 +232,10 @@
         "OnComponentStart": null,
         "OnComponentUpdate": null,
         "PlayerState": "Waiting",
-        "TruthingText": "TRUTHING TEXT",
-        "VotingText": "VOTING TEXT",
-        "WaitingText": "WAITING TEXT"
+        "sitBox": 0,
+        "TruthingText": "NO DARE! TRUTH ONLY!",
+        "VotingText": "You are VOTING.",
+        "WaitingText": "Welcome To THE CIRCLE OF FEAR.\n\nJudge your peers, and be judged. Press R when ready.\n\nPress E to sit in a chair.\n\nPress P when you believe their Truth!"
       }
     ],
     "Children": [
@@ -247,7 +261,7 @@
             "__enabled": true,
             "Flags": 0,
             "AnimationGraph": null,
-            "BodyGroups": 147713,
+            "BodyGroups": 20737,
             "BoneMergeTarget": null,
             "CreateAttachments": false,
             "CreateBoneObjects": false,
@@ -257,8 +271,8 @@
             "MaterialOverride": null,
             "Materials": null,
             "Model": {
-              "Id": "318496b2-dea3-4b17-af27-b0657ee2ab94",
-              "Path": "models/citizen_human/human.vmdl"
+              "Id": "161d0b00-c517-4044-989d-b679dab75a28",
+              "Path": "models/citizen_human/citizen_human_male.vmdl"
             },
             "Morphs": {},
             "OnComponentDestroy": null,
@@ -292,7 +306,7 @@
         ],
         "Children": [
           {
-            "__guid": "2200f3d5-4099-4769-be16-d390b87884fd",
+            "__guid": "b21377c4-cb92-48bb-a3ce-21dfb168ede5",
             "__version": 2,
             "Flags": 0,
             "Name": "Clothing - y_front_pants_white",
@@ -309,7 +323,7 @@
             "Components": [
               {
                 "__type": "Sandbox.SkinnedModelRenderer",
-                "__guid": "62fa43cf-3b2c-4e29-98d9-3a1f32c4dcda",
+                "__guid": "b34ca46c-5c86-425a-887c-6b745d86f407",
                 "__enabled": true,
                 "Flags": 0,
                 "AnimationGraph": null,
@@ -382,7 +396,7 @@
             "__enabled": true,
             "Flags": 1,
             "ColliderFlags": 0,
-            "Elasticity": null,
+            "Elasticity": 0,
             "End": "0,0,36",
             "Friction": 0,
             "IsTrigger": false,
@@ -410,7 +424,7 @@
             "Flags": 1,
             "Center": "0,0,18",
             "ColliderFlags": 0,
-            "Elasticity": null,
+            "Elasticity": 0,
             "Friction": 0,
             "IsTrigger": false,
             "OnComponentDestroy": null,

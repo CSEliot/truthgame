@@ -1,11 +1,11 @@
 {
-  "Title": "Truth",
+  "Title": "The Circle of Fear",
   "Type": "game",
-  "Org": "local",
+  "Org": "cseliot",
   "Ident": "truth",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": null,
+  "Resources": "",
   "PublishUsedAssetsOnly": true,
   "PackageReferences": [],
   "EditorReferences": null,
@@ -16,7 +16,7 @@
   },
   "Metadata": {
     "MaxPlayers": 64,
-    "MinPlayers": 1,
+    "MinPlayers": 2,
     "TickRate": 50,
     "GameNetworkType": "Multiplayer",
     "MapSelect": "Unrestricted",
@@ -27,6 +27,17 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/basic_example.scene"
+    "StartupScene": "scenes/basic_example.scene",
+    "RecommendedMinPlayers": 4,
+    "RecommendedMaxPlayers": 6,
+    "Coop": true,
+    "Versus": false,
+    "WorkshopTags": [
+      "Casual",
+      "Exploration",
+      "Horror",
+      "Party",
+      "Social"
+    ]
   }
 }

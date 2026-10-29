@@ -27,7 +27,10 @@ namespace Sandbox;
 public sealed class TruthCC : Component
 {
 	[Property, Sync] public bool IsReady { get; set; }
+	[Property, Sync] public bool IsAcceptingTruth { get; set; }
 
+	[Property] private float sitBox { get; set; }
+	
 	private CameraComponent _camera;
 
 	public enum EPlayerState
@@ -47,6 +50,7 @@ public sealed class TruthCC : Component
 
 	protected override void OnStart()
 	{
+		// Nothing
 	}
 
 	protected override void OnUpdate()
@@ -54,7 +58,7 @@ public sealed class TruthCC : Component
 		if ( IsProxy )
 			return;
 		
-		Log.Info("Player State: " + PlayerState);
+		// Log.Info("Player State: " + PlayerState);
 		
 		if(_camera == null)
 			_camera = Scene.Camera;
@@ -64,6 +68,14 @@ public sealed class TruthCC : Component
 			IsReady = true;
 			Log.Info("Pressed R! - " + Network.OwnerId);
 		}
+
+		if (Input.Keyboard.Pressed( "P" ) && PlayerState == EPlayerState.Voting)
+		{
+			IsAcceptingTruth = !IsAcceptingTruth;
+			Log.Info("Pressed P! - " + Network.OwnerId);
+		}
+
+		// GetComponent<PlayerController>().Tooltips
 		
 		DrawOnScreen();
 	}
@@ -73,6 +85,7 @@ public sealed class TruthCC : Component
 		if( _camera == null )
 			Log.Error("Scene Camera never found!");
 
+		var screenSize = _camera!.ScreenRect.Size;
 		float scale = _camera!.ScreenRect.Size.y / 1080f;
 
 		using var painter = _camera.BeginHud();
@@ -81,10 +94,25 @@ public sealed class TruthCC : Component
 		{
 			FontName = "Poppins", FontSize = 32 * scale, Color = Color.White, Alignment = TextFlag.Center | TextFlag.DontClip,
 		};
-		
 		string speakingText = PlayerState == EPlayerState.Truthing ? TruthingText : VotingText;
 		speakingText = PlayerState == EPlayerState.Waiting ? WaitingText : speakingText;
-		painter.Text("SPEAK:: " + speakingText, new Rect(50 * scale, 50 * scale, 400 * scale, 400 * scale)  );
+		speakingText = IsAcceptingTruth ? "You believe them." : speakingText;
+		speakingText = IsReady && PlayerState == EPlayerState.Waiting ? "You are Ready." : speakingText;
+		speakingText = Scene.GetAllComponents<GameManager>().First()._gameState == GameManager.GameState.Waiting ? WaitingText : speakingText;
+		painter.Text("" + speakingText, new Rect(500 * scale, 50 * scale, 400 * scale, 400 * scale)  );
+
+		if ( GetComponent<PlayerController>().Tooltips.Count > 0 &&
+		     GetComponent<PlayerController>().Tooltips.Any( t => t.Title.Contains( "Sit" ) ) )
+		{
+			var sitBoxW = 400 * scale;
+			var sitBoxH = 400 * scale;
+			painter.TextStyle = new TextStyle()
+			{
+				FontName = "Poppins", FontSize = 32 * 4 * scale, Color = Color.White, Alignment = TextFlag.RightBottom | TextFlag.DontClip,
+			};
+			painter.Text( "Sit: E Key", new Rect( screenSize.x - sitBoxW - 50 * scale, screenSize.y - sitBoxH - 50 * scale, sitBoxW, sitBoxH ) );
+		}
+
 	}
 }
 
